@@ -22,7 +22,10 @@
                 <p class="pt-5 font-semibold">0Total, 0Completed, 0pending</p>
                 <div class="flex pt-8 md:px-8"> 
                     <input type="text" class="w-[80%]  rounded-l p-1.5 ms-3  border-b-2 bg-transparent outline-none border-[#00DFC0] text-[16px]" placeholder="Add your task" id="todo-input">
-                    <button type="submit" class="bg-[#00DFC0] px-3 rounded-r  text-gray-500 text-[20px]"><i class="ri-pencil-fill"></i></button>
+
+                    <button type="button" onclick="addTask()" class="bg-[#00DFC0] px-3 rounded-r  text-gray-500 text-[20px]"><i class="ri-pencil-fill"></i></button>
+                        <br>
+                        <small id="error"></small>
                 </div>
         </form>
             
@@ -38,15 +41,8 @@
                             <th class=" w-24 p-3 text-sm font-semibold tracking-wide text-left" id="deleteBtn">Delete</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th class="w-20 p-3 text-sm font-semibold tracking-wide text-left">1</th>
-                            <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left">Hashib</th>
-                            <th class="w-24 ps-3  text-sm font-semibold tracking-wide text-left">23/10</th>
-                            <th class="w-24 p-3 ps-7 text-sm font-semibold tracking-wide text-left"> <i class="ri-checkbox-line"></i></th>
-                            <th class="w-24 p-3 ps-7 text-sm font-semibold tracking-wide text-left"><i class="ri-delete-bin-line"></i></th>
-                            <th class="w-24 p-3 text-sm font-semibold tracking-wide text-left"><i class="ri-edit-box-line"></i></th>
-                        </tr>
+                    <tbody id="tbody">
+                      
                     </tbody>
                 </table>
             </div>

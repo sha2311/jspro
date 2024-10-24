@@ -1,8 +1,10 @@
 const date = document.getElementById('date');
 const hours = document.getElementById('hour');
 const editForm = document.getElementById('edit-form');
-const todoInput = document.getElementById('todo-input');
-const deleteBtn = document.getElementById('deleteBtn')
+const deleteBtn = document.getElementById('deleteBtn');
+const todoList = document.getElementById('todo-list');
+const tbody = document.getElementById('tbody');
+
 
 const data = new Date();
 const timeNow = Date.now();
@@ -30,3 +32,15 @@ function time() {
        setTimeout(' time()', 500)
 }
 
+let taskCount = 0; 
+
+function addTask() {
+  const todoInput = document.getElementById('todo-input').value; 
+
+  if (todoInput.value ==='' || todoInput.value == null) {
+    alert("Please task fill Up")
+    return;
+  }
+
+
+}
