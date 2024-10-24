@@ -31,3 +31,8 @@ body{
     left: 50%;
     border-radius: 5px;
 }
+.ri-delete-bin-line:hover{
+    color: red;
+    
+}
+

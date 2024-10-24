@@ -32,9 +32,9 @@ function time() {
        setTimeout(' time()', 500)
 }
 
-let taskAdd = 0; 
+ let taskAdd = 0; 
 
-function addTask() {
+ function addTask() {
   const todoInput = document.getElementById('todo-input').value; 
 
   if (todoInput === "") {
@@ -55,17 +55,24 @@ function addTask() {
 
                 
                 
-                <td><button onclick="checkTask(${taskAdd})"><i class="ri-checkbox-line"></i></button></td>
+                 <td><input type="checkbox"></td>
                 <td><button onclick="deleteTask(${taskAdd})"><i class="ri-delete-bin-line"></i></button></td>
                 <td><button onclick="editTask(${taskAdd})"><i class="ri-edit-box-line"></i></button></td>
               </tr>`;
 
-  tbody.innerHTML += row;
+    document.getElementById('tbody').innerHTML += row;
 
    document.getElementById('todo-input').value = '';
+  }
   
-  
- 
 
 
-}
+  
+
+  function deleteTask(taskId) {
+    
+    const row = document.getElementById(`task-${taskId}`);
+    row.parentNode.removeChild(row);
+  }
+
+
