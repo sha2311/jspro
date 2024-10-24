@@ -32,15 +32,35 @@ function time() {
        setTimeout(' time()', 500)
 }
 
-let taskCount = 0; 
+let taskAdd = 0; 
 
 function addTask() {
   const todoInput = document.getElementById('todo-input').value; 
 
-  if (todoInput.value ==='' || todoInput.value == null) {
-    alert("Please task fill Up")
+  if (todoInput === "") {
+    alert("Please task fill Up");
     return;
   }
+
+  taskAdd++; 
+
+  const day = data.getDate();
+  const month = data.getMonth();
+  const nowDate = `${day} / ${month}`
+  
+  const row = `<tr id="task-${taskAdd}">
+                <td>${taskAdd}</td>
+                <td>${todoInput}</td>
+                <td>${nowDate}</td>
+
+                
+                
+                <td><button onclick="checkTask(${taskAdd})"><i class="ri-checkbox-line"></i></button></td>
+                <td><button onclick="deleteTask(${taskAdd})"><i class="ri-delete-bin-line"></i></button></td>
+                <td><button onclick="editTask(${taskAdd})"><i class="ri-edit-box-line"></i></button></td>
+              </tr>`;
+
+  tbody.innerHTML += row;
 
 
 }
