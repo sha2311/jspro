@@ -75,4 +75,13 @@ function time() {
     row.parentNode.removeChild(row);
   }
 
+  function editTask(taskId) {
+    const taskRow = document.getElementById(`task-${taskId}`);
+    const currentTask = taskRow.children[1].textContent;
+
+    document.getElementById('todo-input').value = currentTask;
+    document.querySelector("button[onclick^='addTask']").onclick = function () {
+      updateTask(taskId);
+    };
+  }
 
