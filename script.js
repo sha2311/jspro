@@ -62,5 +62,10 @@ function addTask() {
 
   tbody.innerHTML += row;
 
+   document.getElementById('todo-input').value = '';
+  
+  
+ 
+
 
 }
