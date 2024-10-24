@@ -93,9 +93,12 @@ function time() {
       return;
     }
   
-  
     const taskRow = document.getElementById(`task-${taskId}`);
     taskRow.children[1].textContent = updatedTask;
   
-    
+    document.querySelector("button[onclick^='updateTask']").onclick = function () {
+      addTask();
+    };
+  
+    document.getElementById('todo-input').value = '';
   }
