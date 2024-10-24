@@ -85,3 +85,17 @@ function time() {
     };
   }
 
+  function updateTask(taskId) {
+    const updatedTask = document.getElementById('todo-input').value;
+  
+    if (updatedTask === "") {
+      alert("Task cannot be empty");
+      return;
+    }
+  
+  
+    const taskRow = document.getElementById(`task-${taskId}`);
+    taskRow.children[1].textContent = updatedTask;
+  
+    
+  }
