@@ -20,14 +20,14 @@
 
         <form action=""  id="edit-form" >
                 <p id="task-status">
-                    <span id="total-task">0</span> Total,
-                    <span id="Completed-task">0</span>Completed,
-                    <span id="pending-task">0</span>Pending
+                    <span id="total-task">1</span> Total
+                    <span id="Completed-task">0</span>Completed
+                    <span id="pending-task">1</span>Pending
                 </p>
                 <div class="flex pt-8 md:px-8"> 
                     <input type="text" class="w-[80%]  rounded-l p-1.5 ms-3  border-b-2 bg-transparent outline-none border-[#00DFC0] text-[16px]" placeholder="Add your task" id="todo-input">
 
-                    <button type="button" onclick="addTask()" id="" class="bg-[#00DFC0] px-3 rounded-r  text-gray-500 text-[20px]"><i class="ri-pencil-fill"></i></button>
+                    <button type="button" onclick="addTask()" id="addbtn"  class="bg-[#00DFC0] px-3 rounded-r hover:bg-slate-800  text-gray-500 text-[20px]"><i class="ri-pencil-fill"></i></button>
                 </div>
         </form>
             
@@ -36,11 +36,11 @@
                 <table class="w-full">
                     <thead>
                         <tr class="text-[#4D5154] border-b-2 border-[#4D5154] ">
-                            <th class="w-20 p-3 text-sm font-semibold tracking-wide text-left">Num</th>
-                            <th class="w-24 p-3 text-sm font-semibold tracking-wide text-left">Task</th>
-                            <th class=" w-24 p-3 text-sm font-semibold tracking-wide text-left">Date</th>
-                            <th class=" w-24 p-3 text-sm font-semibold tracking-wide text-left">Status</th>
-                            <th class=" w-24 p-3 text-sm font-semibold tracking-wide text-left" id="deleteBtn">Delete</th>
+                            <th class="w-20 p-3 text-sm font-semibold tracking-wide text-left hover:text-rose-500">Num</th> 
+                            <th class="w-24 p-3 text-sm font-semibold tracking-wide text-left hover:text-rose-500">Task</th>
+                            <th class=" w-24 p-3 text-sm font-semibold tracking-wide text-left hover:text-rose-500">Date</th>
+                            <th class=" w-24 p-3 text-sm font-semibold tracking-wide text-left hover:text-rose-500">Status</th>
+                            <th class=" w-24 p-3 text-sm font-semibold tracking-wide text-left hover:text-rose-500" id="deleteBtn">Delete</th>
                         </tr>
                     </thead>
                     <tbody id="tbody">
